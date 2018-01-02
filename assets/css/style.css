@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i');
-
+@import url("https://use.typekit.net/hyr1atq.css");
 html,
 body {
   min-height: 100%;
   width: 100%;
 }
-body {  font-family: 'Open Sans', sans-serif; color: #5f5f5f; font-size: 15px; font-weight: 400; background: url(../img/pattern.jpg); }
+body {  font-family: "proxima-nova",sans-serif; color: #5f5f5f; font-size: 15px; font-weight: 400; background: url(../img/pattern.jpg); }
 
 section { min-height: 350px; padding: 40px 0; position: relative;}
 
@@ -25,12 +25,12 @@ a:focus {
   text-decoration: none;
 }
  
-h1 {font-family: 'Open Sans', sans-serif; font-size: 2em; color: #00aed9;}
-h2 {font-family: 'Open Sans', sans-serif; font-size: 2em; }
-h3 {font-family: 'Open Sans', sans-serif; font-size: 1em; color: #00aed9; }
-h4 {font-family: 'Open Sans', sans-serif; font-size: 3.5em; font-weight: bold; }
-h5 {font-family: 'Open Sans', sans-serif; font-size: 1.7em; font-weight:900;}
-h6 {font-family: 'Open Sans', sans-serif; font-size: 1.2em; }
+h1 {font-family: 'proxima-nova', sans-serif; font-size: 2em; color: #00aed9;}
+h2 {font-family: 'proxima-nova', sans-serif; font-size: 2em; }
+h3 {font-family: 'proxima-nova', sans-serif; font-size: 1em; color: #00aed9; }
+h4 {font-family: 'proxima-nova', sans-serif; font-size: 3.5em; font-weight: bold; }
+h5 {font-family: 'proxima-nova', sans-serif; font-size: 1.7em; font-weight:900;}
+h6 {font-family: 'proxima-nova', sans-serif; font-size: 1.2em; }
 
 
  
@@ -58,6 +58,10 @@ h6 {font-family: 'Open Sans', sans-serif; font-size: 1.2em; }
 /*slider*/
 .slick .img-responsivo{  height: 100%; width: 100%; min-height: 100%; height: 100vh;  background-size: cover; background-repeat: no-repeat; background-position: top; }
 .slick .caja-slider { padding:200px 0 0 50px; height: 100vh; overflow: hidden; }
+
+#textos_banner{ background: rgba(0,0,0,0.3); color: #fff; text-align: left; padding: 10px 40px; display: inline-block;}
+#textos_banner h2{margin-bottom: 0}
+#textos_banner h1{margin-top: 10px; font-weight: bold; color: #fff;}
 
 #bottom_banner{    background: url(../img/banner_bottom.png) no-repeat center top; background-size: cover; position: absolute; top: -85px; height: 85px; width: 100%; }
  
@@ -98,6 +102,7 @@ border:1px solid white;
 .effeckt-caption[data-effeckt-type="cover-fade"]:hover figcaption {
   opacity: 1;
 }
+.effeckt-caption figcaption a{color: #fff;}
 .effeckt-caption figcaption p {
   margin: 10px 0;
   font-size: small;
@@ -105,6 +110,23 @@ border:1px solid white;
   opacity: 1;
 }
  
+ 
+.destino{
+	width: calc(100% - 110px);
+    margin: 0 auto;
+    display: block;
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    position: relative;
+    vertical-align: top;
+}
+.destino:before {
+    content: '';
+    display: inline-block;
+    padding-top: 100%;
+}
+p.tit-destino{font-weight: bold;font-size: 12px; text-transform: uppercase;}
  
 /* The form */
 #formid input, #formid textarea , #formid select { width: 100%; color: #9a9a9a; padding:10px; margin:10px 0; border: none; background:white; border: 1px #ccc solid;}
@@ -116,6 +138,7 @@ border:1px solid white;
 #formid textarea:-moz-placeholder { color: #9a9a9a  }
 #formid textarea::-moz-placeholder { color: #9a9a9a  }
 #formid textarea:-ms-input-placeholder { color: #9a9a9a  }
+#formid .btn{margin: 0 auto; display: block; width: 100%;}
 .boton  {
     border:none!important;
     color: #999!important;
@@ -182,7 +205,7 @@ border:1px solid white;
 .navbar-default {
   background-color: transparent;
   border-color: transparent;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'proxima-nova', 'Helvetica Neue', Arial, sans-serif;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -220,6 +243,19 @@ border:1px solid white;
   background-color: #06BEF8;
   overflow: hidden;
 }
+.navbar-default > .container{
+    border-bottom: 1px solid #fff;
+    padding-bottom: 40px;
+}
+.navbar-default.affix  > .container{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.navbar-default .navbar-header .navbar-brand img{ 
+  transition: all 0.2s ease-in-out;
+}
+
 .navbar-default.affix .navbar-header .navbar-brand img{ 
   height:60px; 
 }
@@ -233,7 +269,19 @@ border:1px solid white;
   border-top: 3px solid #fff ;
 }
 
+/*INTERIOR OTROS PRODUCTOS*/
+#otros-header{position: absolute; width: 100%; top: 40%;}
+#otros-productos{margin: 20px 0 100px 0;}
+#otros-productos .row{margin: 60px 0 0;}
+#otros-productos .row .col-md-5{padding: 0;}
 
+#otros-productos .row h1{background: url(../img/linea.png) right 18px no-repeat; display: inline; padding-right: 75px; color: #494949; font-weight: 300;}
+#otros-productos .row.text-right h1{background: url(../img/linea.png) left 18px no-repeat; display: inline; padding-left: 75px; padding-right: 0;}
+#otros-productos .row h1 img{    width: 24px; margin-right: 10px; position: relative; top: -2px;}
+#otros-productos .row.text-right h1 img{   margin-right: 0; margin-left: 10px;}
+#otros-productos .row p{margin-top: 30px;}
+
+#otros-productos .row h1 img.auto{width: 40px;}
 
 
 @media (max-width: 768px) {
@@ -241,13 +289,17 @@ border:1px solid white;
 
   .centrado {display: block; margin-right: auto; margin-left: auto; text-align: center!important;}
 
+  .slick .caja-slider { padding: 60px 0 0 0px; }
+  #textos_banner {text-align: center;}
+  #textos_banner h1 { margin-top: 0px;}
+  #textos_banner h2 {  font-size: 24px;}
+  
   section {
     min-height: 250px;
     padding: 20px 0;
   }
  
   p{ text-align: center!important;}
-
 
   .effeckt-caption figcaption p {
   margin: 5px 0;
@@ -299,6 +351,11 @@ border:1px solid white;
     background-color: transparent;
     border-top:none;
   }
+  
+  .navbar-default > .container{
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
 
 

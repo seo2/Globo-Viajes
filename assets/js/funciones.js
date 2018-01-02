@@ -75,8 +75,55 @@ $('.slick').slick({
 
 var myMixitUp = document.querySelector('.elmixitup');
 
-var mixer = mixitup(myMixitUp);
+var mixer = mixitup(myMixitUp,{
+	load: {
+        filter: '.destacado'
+    }
+});
  
+ 
+$('#formid')
+    .formValidation({
+        framework: 'bootstrap',
+        excluded: ':disabled',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        }
+    })
+    .on('err.field.fv', function(e, data) {
+            data.element
+                .data('fv.messages')
+                .find('.help-block[data-fv-for="' + data.field + '"]').hide();
+    })
+    .on('success.form.fv', function(e) {
+		e.preventDefault();
+
+		$("#btnEnviar").html('<i class="fa fa fa-spinner fa-spin"></i>');
+		$.ajax({
+		    type: 	"POST",
+		    url: 	$("#formid").attr('action'),
+		    data: 	$("#formid").serialize(),
+		    success: function(msg) {
+		    	console.log(msg);
+		    	if(msg=='ok'){
+		        	alert("Enviado");
+					$('#formid').data('formValidation').resetForm();
+					$('#formid')[0].reset();
+		    	}else{
+		        	alert("ha ocurrido un error");
+					$('#btnEnviar').prop('disabled', false);
+					$('#btnEnviar').removeClass('disabled');
+		    	}
+				$("#btnEnviar").html('enviar');
+		    },
+		    error: function(xhr, status, error) {
+				//alert(status);
+			}
+		});
+		 
+    }); 
  
 
 })(jQuery); // End of use strict
