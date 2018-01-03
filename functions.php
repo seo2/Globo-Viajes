@@ -6,7 +6,7 @@ function my_assets() {
 	wp_enqueue_style( 'boot-strap', $themeURL . '/vendor/bootstrap/css/bootstrap.min.css' );
 	wp_enqueue_style( 'font-awesome', $themeURL . '/vendor/font-awesome/css/font-awesome.min.css' );
 	wp_enqueue_style('style-valio', get_template_directory_uri() . '/vendor/formvalidation/css/formValidation.min.css', array(), '1', 'screen' );
-	wp_enqueue_style( 'theme-style', $themeURL . '/assets/css/style.css', array( 'boot-strap' ));
+	wp_enqueue_style( 'theme-style', $themeURL . '/assets/css/style.css', array( 'boot-strap' ),'5');
 	wp_enqueue_style( 'animate-style', $themeURL . '/vendor/wow/css/animate.css' );
 	wp_enqueue_style( 'twentytwenty-style', $themeURL . '/vendor/mixitup/style.css' );
 	wp_enqueue_style( 'slick-style', $themeURL . '/vendor/slick/slick.css' );

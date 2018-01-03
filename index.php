@@ -172,7 +172,7 @@
 </section>
 
 
-<section>
+<section id="medios_pago"> 
     <?php
         // QUERY PAGE 
         $args = array(

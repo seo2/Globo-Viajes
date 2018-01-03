@@ -5,12 +5,14 @@ body {
   min-height: 100%;
   width: 100%;
 }
-body {  font-family: "proxima-nova",sans-serif; color: #5f5f5f; font-size: 15px; font-weight: 400; background: url(../img/pattern.jpg); }
+body {  font-family: "proxima-nova",sans-serif; color: #5f5f5f; font-size: 15px; font-weight: 400; background: url(../img/background.jpg) bottom; background-size: cover; }
 
 section { min-height: 350px; padding: 40px 0; position: relative;}
 
 footer { position: relative; padding: 80px 0 80px 0; background: url(../img/bg_footer.png) center top no-repeat; background-size: cover; }
 footer  p{ padding-top: 24px;color: white;}
+footer  p a{color: white;text-decoration: underline;}
+footer  p a:hover{color: white; text-decoration: none;}
 footer #avion{ position: absolute; top: -60px; left: 0px; }
  
 a {
@@ -184,11 +186,14 @@ p.tit-destino{font-weight: bold;font-size: 12px; text-transform: uppercase;}
   background-image: linear-gradient(to bottom, #6644ff, #4bb4ff)!important;
 }
 
+/*
  #destinos{ background:  url(../img/bg_right.png) no-repeat right center; }
 
 
 #viajes{ background: url(../img/bg_left.png) no-repeat left center, url(../img/bg_right.png) no-repeat right center; }
+*/
 
+#medios_pago{padding-top: 0;}
 
 /*MENU NAVEGACION*/
 .navbar {
